@@ -1,0 +1,32 @@
+@font-face {
+    font-family: MonserratFuenteCustom;
+    src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+h1{
+    font-family: 'Mansalva';
+    font-style: italic;
+    text-transform: uppercase;
+    /*Colores*/
+    /*Colores del Sistema*/
+    color: mediumpurple;
+    /*Colores Hexadecimales*/
+    color: #eee;
+    /*Colores RGB*/
+    color: rgb(62, 183, 32);
+    /*Colores RGBA*/
+    color: rgba(145, 54, 177, 0.282);
+
+}
+
+h3{
+    font-family: MonserratFuenteCustom, "Comic Sans MS";
+    font-size: 35px;
+    font-weight: lighter;
+    color: olive;
+
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}

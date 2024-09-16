@@ -1,0 +1,66 @@
+/*
+##########################SELECTORES##########################
+*/
+
+/*Selector Universal*/
+/*El "*" sirve como etiqueta universal para todo el contenido situado en el body, por tanto todos los que cambios que realizamos dentro de esta etiqueta afectara a toda nuestra página html */
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Selector de etiqueta*/
+/*Los selectores de etiqueta hacen referencia a todas aquellas etiquetas que pertenecen al html:5 como por ejemplo: "h1", "div", "header"...etc. Por lo tanto solo afectara a todas aquellas que especifiquemos en el css.*/
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+/*Para seleccionar etiquetas internas dentro de nuestra etiqueta principal como puede ser el header,section, footer..etc. Declaramos la etiqueta principal y acontinuacion declaramos la etiqueta interna situada dentro de nuestra etiqueta principal. De esta manera solo realizaremos cambios a la etiqueta deseada sin afectar al resto de etiquetas del mismo tipo situadas en otras etiquetas.*/
+/*Declaramos: "Etiqueta Principal" + "Espacio" + "Etiqueta interna"*/
+footer a{
+    color: red;
+
+}
+/*Selector de id*/
+/*Para seleccionar etiquetas de tipo id es tan sencillo como declarar: "#" + "NombreID en HTML". Debemos introducir exactamente igual el id que hemos declarado en html para que nos lo modifique en el css*/
+/*Para compartir estilos entre etiquetas de tipo id es tan facil comop declarar: "#" + "NombreID 1ª en HTML" + "," + "#" + "NombreID 2ª en HTML""*/
+/*IMPORTANTE!!!: Las etiquetas de tipo id no esta diseñados para varios elementos por lo tanto solo podemos declarar un unico id por etiqueta*/
+#contenedor, #encabezado{
+    background-color:gray;
+    border: 5px dashed black;
+    padding: 15px;
+}
+/*Selector de clase*/
+/*Para seleccionar etiquetas de tipo clase debemos declarar: "."+"NombreClase en HTML". Debemos introducir exactamente igual el nombre de la clase que hemos declarado en html para que nos lo modifique en el css*/
+/*Además dentro del html en el apartado class no solo podemos declarar un nombre determinado para esa clase sino varios dentro de la misma. Ejemplo: class="parrafo parrafo1".*/
+/*IMPORTANTE!!!: A diferencia de las etiquetas de tipo id, estas sí estan diseñadas para varios elementos por lo que podemos poner la misma clase a varias etiquetas.*/
+.parrafo{
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/*Selector de atributo*/
+/*Se suelen utilizar en formularios, ya que lo hace más comodo a la hora de modificar en el CSS. Para seleccionar etiquetas de tipo atributo declaramos: "Etiqueta. Ejemplo: Input" + "[type="Nombre Atributo en HTML"]".*/
+
+/*
+input [type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+}
+*/
+/*Selectores hijo*/
+/*Los selectores hijo son aquellas etiquetas del mismo tipo que se encuentran anidadas y a las cuales solo deseamos realizar un cambio y que no afecte a nuestra etiqueta principal del mismo tipo.*/
+/*Para ello declaramos: "#IDNombre en html" + ">" + "nombre etiqueta" + ">" + "Nombre etiqueta anidada"*/
+
+/*Prioridad*/
+/*CSS Prioriza los atributos espcificos a los generales por ejemplo si tenemos un h2 y le damos un color de fondo amarillo, pero dentro del h2 le damos una etiqueta de tipo id especifica y la declaramos en nuestro css con el color morado. Nos priorizara el color morada antes que el amarillo*/
+/*Sin embargo si a la etiqueta general h1 le añadimos el atributo import despues del amarillo, nos priorizara el amarillo sobre el morado. Es decir la etiqueta general dominara sobre las etiquetas específicas.*/
+/*Ejemplo :
+h1{
+    color: purple !important;
+}
+*/
